@@ -1,13 +1,29 @@
 <mat-toolbar color="primary">
   <mat-icon>headphones</mat-icon>
-  <span class="spacer"></span>
   <span>MusicTool</span>
   <button class="ms-3" mat-button [matMenuTriggerFor]="menuLibrary">Library</button>
-  <button class="ms-3" mat-button [matMenuTriggerFor]="menuUsers">Users</button>
-  <button class="ms-3" mat-button [matMenuTriggerFor]="menuContents">Contents</button>
+  <button class="ms-3" mat-button [matMenuTriggerFor]="menuPlans">Plans</button>
+  <button class="ms-3" mat-button [matMenuTriggerFor]="menuArtists">Artist</button>
+
+  <span class="spacer"></span>
+
+  <button class="ms-3" mat-button>
+    <mat-icon>account_circle</mat-icon>
+    Italo
+  </button>
+
 </mat-toolbar>
 
 <mat-menu #menuLibrary="matMenu">
+  <button mat-menu-item routerLink="/musictool/new">
+    <mat-icon color="primary">library_add</mat-icon>
+    Crear</button>
+  <button mat-menu-item routerLink="/musictool/library/list">
+    <mat-icon color="primary">playlist_add</mat-icon>
+    Listar</button>
+</mat-menu>
+
+<mat-menu #menuPlans="matMenu">
   <button mat-menu-item routerLink="/curi/nuevo">
     <mat-icon color="primary">favorite</mat-icon>
     Crear</button>
@@ -16,16 +32,7 @@
     Listar</button>
 </mat-menu>
 
-<mat-menu #menuUsers="matMenu">
-  <button mat-menu-item routerLink="/curi/nuevo">
-    <mat-icon color="primary">favorite</mat-icon>
-    Crear</button>
-  <button mat-menu-item routerLink="/curi/listar">
-    <mat-icon color="primary">more_vert</mat-icon>
-    Listar</button>
-</mat-menu>
-
-<mat-menu #menuContents="matMenu">
+<mat-menu #menuArtists="matMenu">
   <button mat-menu-item routerLink="/curi/nuevo">
     <mat-icon color="primary">favorite</mat-icon>
     Crear</button>
