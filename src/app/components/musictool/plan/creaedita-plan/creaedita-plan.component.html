@@ -1,0 +1,38 @@
+<div class="title-container ">
+    <div><h1>Registro</h1></div>
+    <form [formGroup]="form" (submit)="registrar()">
+        <mat-form-field>
+            <mat-label>Nombre del plan </mat-label>
+            <mat-select formControlName="nombreplan">
+              <mat-option *ngFor="let u of nameplan" [value]="u.value">
+                {{ u.viewValue }}
+              </mat-option>
+            </mat-select>
+            <mat-error *ngIf="form.get('nombreplan')?.hasError('required')"
+            >La forma de entrega es obligatoria.</mat-error
+          >
+          </mat-form-field>
+        <br />
+        <mat-form-field>
+            <mat-label>Precio del plan</mat-label>
+            <mat-select formControlName="precioplan">
+              <mat-option *ngFor="let u of precioplan" [value]="u.value">
+                {{ u.viewValue }}
+              </mat-option>
+            </mat-select>
+            <mat-error *ngIf="form.get('precioplan')?.hasError('required')"
+            >La forma de entrega es obligatoria.</mat-error
+          >
+          </mat-form-field>
+      <br />
+      <mat-form-field>
+        <mat-label>Descripción del plan</mat-label>
+        <input matInput formControlName="descripcion" />
+        <mat-error *ngIf="form.get('descripcion')?.hasError('required')"
+          >La Descripción es obligatorio.</mat-error
+        >
+      </mat-form-field>
+      <br />
+      <button mat-raised-button color="primary">Registrar</button>
+    </form>
+  </div>
