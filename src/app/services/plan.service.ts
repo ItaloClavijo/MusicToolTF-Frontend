@@ -26,5 +26,14 @@ export class PlanService {
     return this.listaCambioth.asObservable();
   }
 
-  
+  update(plans:Plan) { 
+    return this.httpTh.put(this.url, plans);
+  }
+  eliminar(id: number) {
+    return this.httpTh.delete(`${this.url}/${id}`);
+  }
+
+  listId(id: number) {
+    return this.httpTh.get<Plan>(`${this.url}/${id}`);
+  }
 }

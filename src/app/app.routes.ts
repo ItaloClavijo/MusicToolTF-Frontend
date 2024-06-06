@@ -15,8 +15,8 @@ export const routes: Routes = [{
     },
     {path:'plans',component:PlanComponent,
     children:[
-        {path:'listplan',component:ListPlanComponent},
         {path:'creaeditaplan',component:CreaeditaPlanComponent},
     ]},
+    
     ]
 }];

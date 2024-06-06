@@ -1,11 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, RouterOutlet } from '@angular/router';
 import { LibraryComponent } from './Library/library.component';
+import { PlanComponent } from './plan/plan.component';
 
 @Component({
   selector: 'app-musictool',
   standalone: true,
-  imports: [RouterOutlet,LibraryComponent],
+  imports: [RouterOutlet,LibraryComponent,PlanComponent],
   templateUrl: './musictool.component.html',
   styleUrl: './musictool.component.css'
 })
