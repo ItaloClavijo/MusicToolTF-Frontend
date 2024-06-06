@@ -10,7 +10,7 @@ const base_url = environment.base
   providedIn: 'root'
 })
 export class LibraryService {
-  private url = `${base_url}/library`
+  private url = `${base_url}/musictool/libraries`
   private icListaCambio=new Subject<Library[]>()
   constructor(private icHttp: HttpClient) {}
 

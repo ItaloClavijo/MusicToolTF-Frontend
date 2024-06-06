@@ -1,4 +1,3 @@
-import { Content } from "./Content"
 import { Users } from "./User"
 
 export class Library {
@@ -7,5 +6,5 @@ export class Library {
     libraryAvailable: boolean = false
     libraryName: string  = ""
     libraryDescription: string = ""
-    usersId: Users = new Users()
+    usersId?: Users = new Users()
 }
